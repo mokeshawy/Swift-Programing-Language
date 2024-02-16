@@ -1,1 +1,1 @@
-Implement the syntax of programming with Swift Programing Language
+Implement the syntax of programming with Swift Programming Language
