@@ -59,7 +59,7 @@ var arrayCount = arr.count // get count of array
 
 /* ---------------- Dictionaries --------------*/
 
-// Dictionaries is a data structure we can store data with "Key and vlaue". But the dictionary does not care about the order of values
+// Dictionaries is a data structure we can store data with "Key and value". But the dictionary does not care about the order of values
 
 // The key in dictionary unique
 
@@ -86,5 +86,47 @@ dictionaryAnyValues.removeValue(forKey: "EGP")
 let dictionaryCount = dictionaryAnyValues.count
 
 print("Dictionary count = \(dictionaryCount)")
+
+
+/* ------------------- Math Operators --------------*/
+
+var x = 5
+var y = 3
+var z = x + y
+
+var a = 10 , b = 3 ,  c = 5
+
+print("a + b = \(a + b)") // addition
+
+print("a - b = \(a - b)") // subtraction
+
+print("a * b = \(a * b)") // multiply
+
+print("a / b = \(Double(a) / Double(b))") // division
+
+print("a % b = \(a % b)") // module
+
+print(a + b * c) // Priority for multiplication and division operations "a * c" and addition into "a"
+
+print( (a + b) * c) // Priority order of operation ( a + b) and multiply into "c"
+
+print(a + b / c) // Priority for multiplication and division operations "a / c" and division into "a"
+
+print( (a + b) / c) // Priority order of operation ( a / b) and division into "c"
+
+
+// assignment operator
+
+a += 4
+a -= 3
+a *= 5
+a /= 9
+a %= 3
+
+
+
+
+
+
 
 
