@@ -1,15 +1,15 @@
 import UIKit
 
-/* Variables */
+/* ------------------Variables ------------------- */
 
 //When using the "var keyword" can be reassigned the value once again
 
 // Initialization
-var fristName = "Moahmed" , lastname = "Keshawy"
+var fristName = "Mohamed" , lastname = "Keshawy"
 
 
 var middelName : String = "Eid"
-middelName = "Mohamed"
+middelName = "Ahmed"
 
 // Declaration
 var homeName : String , homeState : String
@@ -17,7 +17,7 @@ homeName = "My Home"
 
 
 
-/* Constants */
+/* ---------------- Constants ------------------ */
 
 // When using the "let keyword" cannot be assigned the value once again
 let name = "Keshawy"
@@ -28,7 +28,7 @@ fristTime = "10:00 AM"
 lastTime = "3:00 PM"
 
 
-/* Arrays */
+/* ----------------- Arrays ------------------- */
 
 // array is data structure array cane be save mulitaples values from memory from one type and can be accessed to the element by "index" and first element from array start from index "0"
 
@@ -39,4 +39,17 @@ lastTime = "3:00 PM"
 var arr = ["A","B","C"]
 arr.append("D")
 arr.remove(at: 0)
-print(arr[0])
+var firstElement = arr[0]
+
+
+var arrayOfString = [String]() // empty array
+
+arrayOfString = ["E","F","G","O"] // initialize empty arry
+arrayOfString += ["P","Q","R","S"] // add multipale values into array with out using append
+
+arrayOfString.insert("U", at: 0) // add new value with specific index
+
+arrayOfString[0] = "T" // replace vlaue of index "0"
+
+
+arrayOfString.remove(at: 3) // remove value from array with specific
