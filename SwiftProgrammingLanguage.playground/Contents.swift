@@ -125,6 +125,64 @@ a %= 3
 
 
 
+/* ------------ Comparison Operators -------------- */
+    /* ....... < , > , <= , >= , == , != ........*/
+
+var e = 5 , f = 10
+
+var  g = e < f // " < " less than
+
+g = e > f // " > " more than
+
+g = e <= f // " <= " less than or equal
+
+g = e >= f // " >= " more than or equal
+
+g = e == f // " == " equal equal
+
+g = e != f // " ! " not equal
+
+
+
+/* ------------ Logical Operators -----------------*/
+    /* .... and and -> && , or -> ||  not -> ! ...*/
+
+// Logical " and && " 
+e == 4 && f != 11 // false && true = false
+
+e != 5 && f != 10 // false && false = false
+
+e == 5 && f != 10 // true && false = false
+
+e == 5 && f == 10 // true && true = true
+
+// Logical " or || " operator
+e == 4 || f == 11 // false || false  = false
+
+e != 5 || f == 10 // false || true = true
+
+e == 5 || f != 10 // true || false = true
+
+e == 5 || f == 10 // true || true = true
+
+
+// Logical "not !" operator
+var h = false , i = true
+!h && i // true
+
+h && !i // false
+
+!h || !i // true
+
+
+
+
+
+
+
+
+
+
 
 
 
