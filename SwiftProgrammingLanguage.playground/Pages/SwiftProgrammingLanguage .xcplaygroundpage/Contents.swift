@@ -208,7 +208,7 @@ default:
     print("excellent")
 }
 
-/* ---------- Optionals varibles in swift -------- */
+/* ---------- Optionals variable's in swift -------- */
 
 var userName : String? // the userName is a optional string because it may have value or not
 userName = "Mohamed Keshawy"
