@@ -175,6 +175,25 @@ h && !i // false
 !h || !i // true
 
 
+/* -------- if Statement --------- */
+
+var isTrue = true , isFalse = false
+
+if isTrue {
+    print(isTrue)
+}else{
+    print(!isTrue)
+}
+
+if isFalse {
+    print(isTrue)
+}else if isTrue{
+    print(!isTrue)
+}else{
+    print(isTrue)
+}
+
+
 
 
 
