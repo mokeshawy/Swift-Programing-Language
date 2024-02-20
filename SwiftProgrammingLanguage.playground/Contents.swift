@@ -194,6 +194,42 @@ if isFalse {
 }
 
 
+/* --------- Switch Statement ---------- */
+
+var score = 10
+switch score{
+case 0,1: // 0,1 ( , ) -> or operator
+    print("very bad")
+case 1..<5: // 1..5 ( .. )-> it range operator
+    print("bad")
+case 4..<8:
+    print("good")
+default:
+    print("excellent")
+}
+
+/* ---------- Optionals varibles in swift -------- */
+
+var userName : String? // the userName is a optional string because it may have value or not
+userName = "Mohamed Keshawy"
+if userName == nil{
+    print("Please enter your name!")
+}else{
+    print("Welcome \(userName ?? "")")
+}
+
+// how to check the "userName" has "value" or "nil"
+
+userName ?? "Mohamed" // first one assign the default value on the userName
+
+userName! // using the "Exclamation mark" when you are sure the "userName" has value. When the user name not have value the app will be crash.
+
+if let name = userName{
+    print("\(name)")
+} //  using "if let" when you need go to the action when the "userName" has value
+
+
+
 
 
 
