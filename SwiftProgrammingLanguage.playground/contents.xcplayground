@@ -3,5 +3,6 @@
     <pages>
         <page name='Tuples'/>
         <page name='SwiftProgrammingLanguage '/>
+        <page name='loops'/>
     </pages>
 </playground>
