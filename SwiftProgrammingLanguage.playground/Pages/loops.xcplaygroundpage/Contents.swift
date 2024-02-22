@@ -77,3 +77,12 @@ repeat{
 }while count3 < 6
 
 
+
+/* ---- Nested loop ------ */
+
+for i in 1...5{
+    for j in 1...5 {
+        print("i \(i) j \(j)")
+    }
+}
+
