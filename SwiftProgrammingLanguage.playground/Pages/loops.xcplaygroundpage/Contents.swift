@@ -33,23 +33,47 @@ for i in 0..<numbers2.count{
 
 var numbers3 = [1,5,9,3,7]
 for number in numbers3{
-    //print(number)
+    print(number)
 }
 
 for (index,value) in numbers3.enumerated(){
-    //print("key = \(index) value = \(value)")
+    print("key = \(index) value = \(value)")
 }
 
 
 var userDict = ["name":"Keshawy","email":"moKeshawy@gmail.com"]
 
 for item in userDict{
-    //print("key = \(item.key) value = \(item.value)")
+    print("key = \(item.key) value = \(item.value)")
 }
 
 for (key,value) in userDict{
-    //print("key = \(key) value = \(value)")
+    print("key = \(key) value = \(value)")
 }
 
+
+/* ----------- While loop & Repeat While -------------- */
+
+
+// while loop
+var count = 1
+while count < 5{
+    print("Count \(count)")
+    count+=1
+}
+
+var count2 = 5
+while count2 > 0{
+    print("Count \(count2)")
+    count2-=1
+}
+
+
+// repeat while such "do while"
+var count3 = 1
+repeat{
+    print(count3)
+    count3+=1
+}while count3 < 6
 
 
