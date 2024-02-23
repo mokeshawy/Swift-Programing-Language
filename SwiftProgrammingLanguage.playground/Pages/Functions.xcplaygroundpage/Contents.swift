@@ -131,3 +131,23 @@ func getFactorial(num : Int) -> Int{
 }
 
 print("Factorial \(getFactorial(num: 5))")
+
+
+/* -------------- Overloading -------------- */
+
+// Overloading "Polymorphism in compile time concept"
+// The overloading is concept allows you to write more than "Function" with same name but the parameter is Different in the "parameter quantity" or the "data type" or the "return type"
+
+func getNumber(num1:Double , num2 :Double) -> (num1:Double , num2 :Double){
+    return (num1, num2)
+}
+
+func getNumber( num :Double) -> Double{
+    return num
+}
+
+func getNumber() -> Int{
+    return 20
+}
+
+
