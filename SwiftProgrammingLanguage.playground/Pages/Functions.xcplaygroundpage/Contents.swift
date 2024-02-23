@@ -74,3 +74,60 @@ func getMainMax(numbers: [Int]) -> (min:Int,max:Int){
 
 var numbers = [3,6,7,8,9,10,15]
 print(getMainMax(numbers: numbers))
+
+
+
+
+// function wit "call by value" & "call by reference"
+
+/* ----------- call by value ----------- */
+func getPriceWitTax(price: Double) -> Double{
+    // price = price + (price * 0.05) // cannot be change the parameter because price "call by value" is not allocate reference in the memory
+    return price + (price * 0.05)
+}
+
+var price = 100.0
+print("Price with tax \(getPriceWitTax(price: price)) call by value")
+
+
+/* ---------- call by reference -------------- */
+func getPriceWitTax(price: inout Double) -> Double{
+    price = price + (price * 0.05)
+    return price
+}
+
+print("Price with tax \(getPriceWitTax(price: &price)) call by reference")
+
+
+
+
+
+// nested function
+func operation(num1 : Int , num2: Int) -> (sum:Int, sub:Int){
+    func getSum() -> Int{
+        return num1+num2
+    }
+    func getSub() -> Int{
+        return num1-num2
+    }
+    return (getSum(),getSub())
+}
+
+
+print("Sum operation \( operation(num1: 30, num2: 40).sum)")
+print("Sub operation \( operation(num1: 30, num2: 20).sub)")
+
+
+
+
+
+// Recognition function
+func getFactorial(num : Int) -> Int{
+    if(num == 1){
+        return 1
+    }else{
+        return num * getFactorial(num: num - 1)
+    }
+}
+
+print("Factorial \(getFactorial(num: 5))")
