@@ -5,5 +5,6 @@
         <page name='SwiftProgrammingLanguage '/>
         <page name='loops'/>
         <page name='Functions'/>
+        <page name='Closures'/>
     </pages>
 </playground>
