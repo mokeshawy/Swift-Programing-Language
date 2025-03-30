@@ -4,14 +4,14 @@ import UIKit
 
 /*
  - immutable concept
- - let cannot be changed value after declaration
+ - let cannot be changed value after initialize
 */
 let name = "Mohamed"
 
 
 /*
  - mutable concept
- - var can be changed value after declration
+ - var can be changed value after initialize
 */
 
 var age = 10
