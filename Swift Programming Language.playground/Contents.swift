@@ -63,3 +63,16 @@ let myChar : Character = "A" // value: 1 char in double coute, size: 1 byte
 let myString : String = "Hello World" // value: from 2 char in double coute, size: NON
 
 let counactenateString : String = "Hello" + " " + "World"
+
+
+
+/* ------- Type Inference Vs Type Annotation ------- */
+
+// Type Annotation
+
+let annotateType : String = "Hello World"
+
+
+// Type Inference
+
+let inferType = "Hello World"
