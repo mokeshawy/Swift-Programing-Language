@@ -76,3 +76,54 @@ let annotateType : String = "Hello World"
 // Type Inference
 
 let inferType = "Hello World"
+
+
+
+/* ------ Collection Data Types ------ */
+
+
+// Arrays
+
+var testArray : [Int] = [1,2,3,4,5]
+
+// chnage value of element by index
+testArray[0] = 9
+
+// add new element
+testArray.append(18)
+
+
+//Tuples
+
+let myTuple = (firstValue: "Hello", secondValue: 10)
+
+print(myTuple.firstValue)
+
+// Dictionries
+
+var myDict : [String : Any] = ["name" : "Mohamed", "age" : 20]
+
+myDict["name"] = "Keshawy"
+
+myDict["age"] = 30
+
+myDict.removeValue(forKey: "age")
+
+
+// Sets
+
+var mySet : Set<Int> = [1,2,3,4,5]
+
+mySet.insert(6)
+
+mySet.remove(1)
+
+mySet.count
+
+var set1 : Set<Int> = [1,2,3,4]
+var set2 : Set<Int> = [3,4,5,6]
+
+let setUnion : Set<Int> = set1.union(set2)
+let setIntersection : Set<Int> = set1.intersection(set2)
+let setDifference : Set<Int> = set1.subtracting(set2)
+
