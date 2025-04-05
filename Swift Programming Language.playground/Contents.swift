@@ -97,7 +97,6 @@ testArray.append(18)
 
 let myTuple = (firstValue: "Hello", secondValue: 10)
 
-print(myTuple.firstValue)
 
 // Dictionries
 
@@ -126,4 +125,54 @@ var set2 : Set<Int> = [3,4,5,6]
 let setUnion : Set<Int> = set1.union(set2)
 let setIntersection : Set<Int> = set1.intersection(set2)
 let setDifference : Set<Int> = set1.subtracting(set2)
+
+
+
+/* ------ Conditional Statments ------ */
+
+let number = 8
+if number % 2 == 0{
+    print("\(number) is an even Number")
+}else{
+    print("\(number) is an odd Number")
+}
+
+
+
+let grade = 87
+
+if grade >= 90 {
+    print("Excellent")
+} else if grade >= 80 {
+    print("Very Good")
+} else if grade >= 70 {
+    print("Good")
+} else {
+    print("You failed")
+}
+
+
+
+// Switch case
+
+let allGrade : Int = 60
+
+switch allGrade {
+case 90...100:
+    print("Excellent")
+case 80..<90:
+    print("Very Good")
+case 70..<80:
+    print("Good")
+default:
+    print("You failed")
+}
+
+
+
+//Ternary operator
+
+let ternaryOperator : Int = 91
+
+let result : String = ternaryOperator >= 90 ? "Excellent" : "You failed"
 
