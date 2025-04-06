@@ -226,5 +226,23 @@ for i in 1...10 {
     if i % 2 == 0 {
         continue
     }
-    print("Index: \(i)")
+}
+
+
+for outerIndex in 1...5{
+    
+    for innerIndex in 1...3{
+        
+        print( "Outer Index: \(outerIndex) , Inner Index: \(innerIndex)")
+    }
+}
+
+
+let grid = [[1,2,3], [4,5,6],[7,8,9]]
+
+for row in grid {
+    print("Row: \(row)")
+    for element in row{
+        print("Element: \(element)")
+    }
 }
