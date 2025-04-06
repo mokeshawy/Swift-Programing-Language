@@ -131,43 +131,42 @@ let setDifference : Set<Int> = set1.subtracting(set2)
 /* ------ Conditional Statments ------ */
 
 let number = 8
+var message : String
 if number % 2 == 0{
-    print("\(number) is an even Number")
+    message = "\(number) is an even Number"
 }else{
-    print("\(number) is an odd Number")
+    message = "\(number) is an odd Number"
 }
 
 
 
 let grade = 87
-
+var statmentMessage : String
 if grade >= 90 {
-    print("Excellent")
+    statmentMessage = "Excellent"
 } else if grade >= 80 {
-    print("Very Good")
+    statmentMessage = "Very Good"
 } else if grade >= 70 {
-    print("Good")
+    statmentMessage = "Good"
 } else {
-    print("You failed")
+    statmentMessage = "You failed"
 }
-
-
 
 // Switch case
 
 let allGrade : Int = 60
+var switchMessage : String
 
 switch allGrade {
 case 90...100:
-    print("Excellent")
+    switchMessage = "Excellent"
 case 80..<90:
-    print("Very Good")
+    switchMessage = "Very Good"
 case 70..<80:
-    print("Good")
+    switchMessage = "Good"
 default:
-    print("You failed")
+    switchMessage = "You failed"
 }
-
 
 
 //Ternary operator
@@ -176,3 +175,56 @@ let ternaryOperator : Int = 91
 
 let result : String = ternaryOperator >= 90 ? "Excellent" : "You failed"
 
+
+
+/* -------- Loops --------- */
+
+
+// For loop
+
+var forMessage : String
+for index in 1...5 {
+    forMessage = "Index is : \(index)"
+}
+
+
+let person = [ "name": "Keshawy" , "age": "38", "city": "Cairo"]
+
+var dicMessage : String
+for (key , value) in person{
+    dicMessage = key + " : " + value
+}
+
+
+// While loop
+
+var count : Int = 0
+var whileMessage : String
+while count < 5 {
+   whileMessage = "Count is : \(count)"
+    count += 1
+    if count == 2 {
+        break
+    }
+}
+
+
+
+
+// Rpeat while
+
+var repeatCounter : Int = 0
+
+result: repeat {
+    repeatCounter += 1
+} while repeatCounter < 10
+
+
+
+//Continue
+for i in 1...10 {
+    if i % 2 == 0 {
+        continue
+    }
+    print("Index: \(i)")
+}
