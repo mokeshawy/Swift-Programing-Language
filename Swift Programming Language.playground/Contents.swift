@@ -1,4 +1,5 @@
 import UIKit
+import Foundation
 
             /* ---- Var vs Const ------ */
 
@@ -232,8 +233,7 @@ for i in 1...10 {
 for outerIndex in 1...5{
     
     for innerIndex in 1...3{
-        
-        print( "Outer Index: \(outerIndex) , Inner Index: \(innerIndex)")
+   
     }
 }
 
@@ -241,8 +241,47 @@ for outerIndex in 1...5{
 let grid = [[1,2,3], [4,5,6],[7,8,9]]
 
 for row in grid {
-    print("Row: \(row)")
+    
     for element in row{
-        print("Element: \(element)")
+     
     }
 }
+
+
+
+/* ----- Functions ---- */
+
+
+
+// Buitl in function
+
+let numberTwo = 43
+
+let pi = 3.1415
+
+let stringValue = "    Hello World    "
+
+
+// sin cos tan
+
+let resultSin = sin(pi/2)
+
+
+let rondedValue = round(10.3)
+
+
+let upperCaseString = stringValue.uppercased()
+
+let lowerCase = stringValue.lowercased()
+
+let removeSpace = stringValue.trimmingCharacters(in: .whitespaces)
+
+
+
+
+func getString() -> String{
+    return "Hello World"
+}
+
+print("Func \(getString())")
+
