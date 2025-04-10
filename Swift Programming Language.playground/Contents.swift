@@ -279,9 +279,120 @@ let removeSpace = stringValue.trimmingCharacters(in: .whitespaces)
 
 
 
+
+
+// Return Types
 func getString() -> String{
     return "Hello World"
 }
 
-print("Func \(getString())")
+getString()
 
+
+
+// Parameters
+func grretString(name : String) -> String{
+    return name
+}
+
+grretString(name: "Mohamed")
+
+
+// Void Function
+func increementCount(){
+    var countNum = 0
+    countNum += 1
+}
+
+increementCount()
+
+// Mutli Return Type
+
+func multiReturnType(name : String, age : Int) -> (name : String, age : Int){
+    
+    return (name , age)
+}
+
+multiReturnType(name: "Keshawy", age: 38)
+
+
+// External Parameter naming
+
+func getName(externalName name : String) -> String{
+    return "Hello \(name)"
+}
+
+getName(externalName: "Mohamed")
+
+
+// Omitting external parameter name
+
+
+func omittingExternalParameter(_ a : Int , _ b : Int) -> Int {
+   return a + b
+}
+
+omittingExternalParameter(10, 20)
+
+
+
+// Default paramter value
+
+func getNameByDefaultValue(name : String = "Keshawy") -> String{
+    return name
+}
+
+getNameByDefaultValue()
+
+
+// Function type
+
+let mathOperation : (Int , Int ) -> Int
+
+func addition(_ a : Int , _ b : Int) -> Int{
+    return a + b
+}
+
+mathOperation = addition
+
+let addtionResult = mathOperation(10 , 40)
+
+
+// Variadic Parameters
+
+func sum(numbers : Int...) -> Int{
+    var total = 0
+    for number in numbers{
+        total += number
+    }
+    return total
+}
+
+
+let resultOfSum = sum(numbers: 1, 2, 3, 4)
+
+
+
+// inout parameter
+
+func swapVlaues(_ a: inout Int, _ b: inout Int){
+    let temp = a
+    a = b
+    b = temp
+}
+
+
+var fristNumber = 10
+var secondNumber = 30
+
+swapVlaues(&fristNumber,&secondNumber)
+
+// Recursion Function
+
+func factorial(_ num : Int) -> Int{
+    if num == 0{
+        return 1
+    }else{
+        return num * factorial(num - 1)
+    }
+}
