@@ -396,3 +396,69 @@ func factorial(_ num : Int) -> Int{
         return num * factorial(num - 1)
     }
 }
+
+
+
+/* ----------- Optionals ------------ */
+
+var optionalExample : Int? = nil
+
+var optionlString : String?
+
+
+
+
+// Optional binding
+
+
+// if let
+
+
+// Unwrapped single optional
+
+var optionalBinding : String? = "Optional Binding"
+
+if let unwrappedOtionalBinding = optionalBinding {
+    print("Unwrapped: \(unwrappedOtionalBinding)")
+}else{
+    print("Optional Binding not found")
+}
+
+
+
+// Unwrapped Multi optiona
+var fristName : String? = "Mohame"
+var lastName : String? = "Keshawy"
+
+
+if let unwrappedFristName = fristName, let unwrappedLastName = lastName {
+    print("Full name: \(unwrappedFristName) \(unwrappedLastName)")
+}else{
+   print("No full name found")
+}
+
+// Guard let - erly return
+
+func getName(_ userNmae : String?){
+    guard let validName = userNmae else {
+        return
+    }
+    // if username not nil handle logic here
+    print("Welcom \(validName)")
+}
+
+getName("Mohamed")
+
+
+// Implicitly Unwrapped Optionals
+
+var implicitlyUnwrappedString : String! = "Implicitly Unwrapped String"
+
+print(implicitlyUnwrappedString!)
+
+
+// Type Alias
+
+typealias Age = Int
+
+var myAge : Age = 30
