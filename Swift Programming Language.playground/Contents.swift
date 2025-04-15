@@ -457,8 +457,67 @@ var implicitlyUnwrappedString : String! = "Implicitly Unwrapped String"
 print(implicitlyUnwrappedString!)
 
 
-// Type Alias
+        /* ------ Type Alias ------- */
 
 typealias Age = Int
 
 var myAge : Age = 30
+
+
+        /* ------- Clousre -------- */
+
+
+// Syntax
+
+let sayHello : () -> Void = {
+    print("Hello World")
+}
+
+sayHello()
+
+
+let closure = { (_ a : String) -> String in
+    return a
+}
+
+closure("Hello")
+
+
+
+// Sorted Method
+
+let numbers = [9,2,1,3,4,7,6,8]
+
+let sortedNumbers = numbers.sorted(by: { (a : Int , b : Int) in
+    
+    return a < b
+})
+
+
+// Inferring Type from context
+
+let sortedNumbersWithInferringType = numbers.sorted(by: { a,b in
+    return a < b
+} )
+
+
+// Implicit returns from Single-Expression Closure
+
+
+let sortedNumbersWithImplicitReturn = numbers.sorted(by: { a,b in a < b
+} )
+
+// Operation Method - too short
+
+let sortedNumbersWithOperationMethod = numbers.sorted(by: < )
+
+
+
+// Shorthanded Arguments
+
+let sortedNumberWithShortedHanded = numbers.sorted(by: { $0 < $1})
+
+
+// Trailing Closures
+ 
+let sortedNumberWithTrailingClosures = numbers.sorted(){ $0 < $1}
