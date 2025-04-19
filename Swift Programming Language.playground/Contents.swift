@@ -419,7 +419,7 @@ var optionlString : String?
 var optionalBinding : String? = "Optional Binding"
 
 if let unwrappedOtionalBinding = optionalBinding {
-    print("Unwrapped: \(unwrappedOtionalBinding)")
+    //print("Unwrapped: \(unwrappedOtionalBinding)")
 }else{
     print("Optional Binding not found")
 }
@@ -432,7 +432,7 @@ var lastName : String? = "Keshawy"
 
 
 if let unwrappedFristName = fristName, let unwrappedLastName = lastName {
-    print("Full name: \(unwrappedFristName) \(unwrappedLastName)")
+   /* print("Full name: \(unwrappedFristName) \(unwrappedLastName)") */
 }else{
    print("No full name found")
 }
@@ -444,7 +444,7 @@ func getName(_ userNmae : String?){
         return
     }
     // if username not nil handle logic here
-    print("Welcom \(validName)")
+    //print("Welcom \(validName)")
 }
 
 getName("Mohamed")
@@ -454,7 +454,7 @@ getName("Mohamed")
 
 var implicitlyUnwrappedString : String! = "Implicitly Unwrapped String"
 
-print(implicitlyUnwrappedString!)
+//print(implicitlyUnwrappedString!)
 
 
         /* ------ Type Alias ------- */
@@ -470,7 +470,7 @@ var myAge : Age = 30
 // Syntax
 
 let sayHello : () -> Void = {
-    print("Hello World")
+    //print("Hello World")
 }
 
 sayHello()
@@ -521,3 +521,75 @@ let sortedNumberWithShortedHanded = numbers.sorted(by: { $0 < $1})
 // Trailing Closures
  
 let sortedNumberWithTrailingClosures = numbers.sorted(){ $0 < $1}
+
+
+// Higher Order Function
+
+func funcWithClosure(_ a:Int , _ b: Int, closure : (Int,Int) -> Int ) -> Int{
+    return closure(a,b)
+}
+
+let WithClosureResult = funcWithClosure(10,20){ a , b in
+    return a + b
+}
+
+
+// Map
+
+let testMap = ["a","b","c","d"]
+
+testMap.map { (element) -> String? in return element.uppercased() }
+
+let newMap = testMap.map(){ element in return element.uppercased() }
+
+
+// Compat Map
+
+let compatMapCollection = ["1","2","3","Mohamed","Keshawy","4","5", nil]
+                           
+let compatMap = compatMapCollection.compactMap { (element) -> String? in return element?.uppercased() }
+
+
+// Flat Map
+
+let flatMapCollection : [[Int]] = [[1,2],[3,4],[5,6]]
+
+let flatMapResult : [Int] = flatMapCollection.flatMap { (element) -> [Int] in return element }
+
+
+// Filter
+
+let filterCollection : [Int] = [1,2,3,4,5,6,7,8,9]
+
+let filterResult : [Int] = filterCollection.filter { (element) -> Bool in return element % 2 == 0 } 
+
+
+// Reduce
+
+let reduceCollection : [Int] = [1,2,3,4,5,6,7,8,9]
+
+let reduceResult : Int = reduceCollection.reduce(0){
+    result , element in
+    return result + element
+}
+
+// ForEach Loop
+
+let forEachLoopCollection : [Int] = [1,2,3,4,5,6,7,8,9]
+
+forEachLoopCollection.forEach { element in
+    
+}
+
+// Split
+
+let splitString : String = "Hello  World This is a test"
+
+let splitArray : [Substring] = splitString.split(separator: " ",maxSplits: 3, omittingEmptySubsequences: false)
+
+
+// Contains
+
+let containsString : String = "Hello  World This is a test"
+
+containsString.contains("Hello")
