@@ -592,3 +592,64 @@ enum Gander {
 }
 
 let gander = Gander.FEMALE.changeGender()
+
+
+
+/* ------ Object Oriented Programming ------ */
+
+
+// Class and Object
+
+// Class are referance type
+
+class Book {
+    
+   private var title : String? = nil
+    var author : String
+    var page : Int
+    
+    init( author: String, page: Int) {
+       
+        self.author = author
+        self.page = page
+    }
+    
+    func setTitle(title : String){
+        self.title = title
+    }
+    
+    func getTitle() -> String?  {
+        return self.title
+    }
+}
+
+
+let fristBook = Book(author: "Mohamed", page: 100)
+
+let secondBook = fristBook
+
+
+fristBook.setTitle(title: "First Book")
+
+secondBook.setTitle(title: "Second book")
+
+
+
+// Structs
+
+// Struct are value type
+
+// Struct dose not  support inheritance
+struct Persson {
+    
+    var name : String
+    var age : Int
+    
+}
+
+let persson1 = Persson(name: "Mohamed", age: 20)
+
+var persson2 = persson1
+
+persson2.name = "Keshawy"
+
