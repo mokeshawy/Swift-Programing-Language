@@ -593,47 +593,40 @@ enum Gander {
 
 let gander = Gander.FEMALE.changeGender()
 
-
-
 /* ------ Object Oriented Programming ------ */
-
 
 // Class and Object
 
 // Class are referance type
 
 class Book {
-    
-   private var title : String? = nil
-    var author : String
-    var page : Int
-    
-    init( author: String, page: Int) {
-       
+
+    private var title: String? = nil
+    var author: String
+    var page: Int
+
+    init(author: String, page: Int) {
+
         self.author = author
         self.page = page
     }
-    
-    func setTitle(title : String){
+
+    func setTitle(title: String) {
         self.title = title
     }
-    
-    func getTitle() -> String?  {
+
+    func getTitle() -> String? {
         return self.title
     }
 }
-
 
 let fristBook = Book(author: "Mohamed", page: 100)
 
 let secondBook = fristBook
 
-
 fristBook.setTitle(title: "First Book")
 
 secondBook.setTitle(title: "Second book")
-
-
 
 // Structs
 
@@ -641,10 +634,10 @@ secondBook.setTitle(title: "Second book")
 
 // Struct dose not  support inheritance
 struct Persson {
-    
-    var name : String
-    var age : Int
-    
+
+    var name: String
+    var age: Int
+
 }
 
 let persson1 = Persson(name: "Mohamed", age: 20)
@@ -653,3 +646,140 @@ var persson2 = persson1
 
 persson2.name = "Keshawy"
 
+// Inheritance
+
+class Animal {
+
+    var name: String?
+
+    var age: Int
+
+    init(name: String) {
+        self.name = name
+        self.age = 0
+        print("Dog \(name)")
+    }
+
+    init() {
+        age = 60
+        print("Animal Init")
+    }
+}
+
+class Dog: Animal {
+
+    override init() {
+        super.init()
+        print("Dog Init")
+    }
+
+    override init(name: String) {
+        super.init(name: name)
+    }
+
+}
+
+// Override Methods and Proprties
+
+class Person {
+
+    var name: String {
+        return "Person"
+    }
+
+    func eating() {
+        print("The person  He is eating now..")
+    }
+}
+
+class Boy: Person {
+
+    override var name: String {
+        return "Boy"
+    }
+
+    override func eating() {
+        print("The Boy He is eating now..")
+    }
+}
+
+
+// Protocols
+
+protocol ListView {
+
+    func getItemCount(items: [String]) -> Int
+
+    func printItemsView(items: [String])
+}
+
+class MainApp: ListView {
+
+    func getItemCount(items: [String]) -> Int {
+        return items.count
+    }
+
+    func printItemsView(items: [String]) {
+
+        for item in items {
+            print("Item: \(item)")
+        }
+
+    }
+
+    init() {
+        let items: [String] = ["Mohamed", "Keshawy", "Ahmed"]
+
+        getItemCount(items: items)
+
+        printItemsView(items: items)
+
+    }
+}
+
+
+// Extensions
+
+class Vehicle {
+
+    var speed: Int = 0
+
+    func startEngine() {
+        print("Engine Started")
+    }
+
+    func stopEngine() {
+        print("Engine Stopped")
+    }
+}
+
+extension Vehicle {
+
+    func speedTest() {
+        if speed == 0 {
+            print("Car is not working now")
+        } else if speed >= 60 {
+            print("Speed greter than 60 Km")
+        }
+    }
+}
+
+
+// Generic
+
+func getDataType<T>(parameter: T) -> T {
+    return parameter
+}
+
+struct Box<T>{
+    var item : T?
+}
+
+let firstBox = Box(item: "Apple")
+let secondBox = Box(item: 8)
+
+// Restriction with generic
+
+func printDescription<T : CustomStringConvertible>(_ item: T){
+    print("\(item.description)")
+}
